@@ -1,0 +1,11 @@
+/* Grey out tab bar / titlebar icons */
+headerbar button,
+headerbar tabbar button,
+tabbar button,
+tabbar tab button {
+  color: alpha(@window_fg_color, 0.45);
+}
+headerbar button:hover,
+tabbar button:hover {
+  color: @window_fg_color;
+}
