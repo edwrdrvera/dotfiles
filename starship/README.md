@@ -1,21 +1,16 @@
-# Starship prompt (Omarchy, Solitude)
+# Starship prompt
 
-A powerline-style Starship prompt based on Starship's built-in `tokyo-night`
-preset, recolored with the Omarchy **Solitude** theme palette.
+My terminal prompt. It's Starship's `tokyo-night` preset, recolored to match
+the Omarchy Solitude theme. You need a Nerd Font for the icons.
 
-Requires a [Nerd Font](https://www.nerdfonts.com/) for the powerline glyphs.
+- `starship.toml` - the prompt. Copy it to `~/.config/starship.toml`.
+- `starship-theme.sh` - rebuilds the prompt in the new colors whenever I
+  change my Omarchy theme.
 
-## Files
+To use the hook:
 
-- `starship.toml` - the generated Solitude prompt. Copy to `~/.config/starship.toml`.
-- `starship-theme.sh` - Omarchy `theme-set` hook. Regenerates `starship.toml`
-  from the `tokyo-night` preset using the active theme's `colors.toml`, so the
-  prompt follows theme changes. Install with:
+```
+omarchy hook install theme-set starship/starship-theme.sh
+```
 
-  ```
-  omarchy hook install theme-set starship/starship-theme.sh
-  ```
-
-The hook overwrites `~/.config/starship.toml` on every theme change.
-
-The layout comes from the Starship `tokyo-night` preset (ISC licensed).
+Careful: the hook overwrites `~/.config/starship.toml` on every theme change.
