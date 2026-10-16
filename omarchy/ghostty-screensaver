@@ -1,0 +1,6 @@
+window-padding-x = 0
+window-padding-y = 0
+window-padding-color = "extend-always"
+window-decoration = none
+gtk-titlebar-style = native
+window-show-tab-bar = never
